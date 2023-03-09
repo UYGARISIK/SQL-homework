@@ -1,0 +1,43 @@
+UPDATE employee 
+SET email ='selena19@imag.com'
+WHERE id = 46 ;
+
+UPDATE employee
+SET name = 'Ali'
+WHERE name = 'Erin' ;
+
+UPDATE employee
+SET name = 'John'
+WHERE id = 17
+
+UPDATE employee
+SET name = 'furkan58@kolay.com'
+WHERE id = 21
+
+UPDATE employee
+SET name = 'FAİL',
+	email = 'fail@gmail.com'
+WHERE id BETWEEN 20 AND 30
+RETURNING name, id, email;
+
+
+DELETE FROM employee
+WHERE id > 15
+RETURNING*;
+
+DELETE FROM employee
+WHERE email = 'fail@gmail.com' 
+RETURNING*;
+
+DELETE FROM employee
+WHERE name LIKE 'A%'
+RETURNING*;
+
+DELETE FROM employee
+WHERE name ILIKE 'S%'
+RETURNING*;
+
+
+
+
+
